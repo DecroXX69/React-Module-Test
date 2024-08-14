@@ -123,7 +123,7 @@ textarea {
 
 @media (max-width: 768px) {
   .inputArea {
-  height: 130px; 
+  height: 150px; 
   padding: 10px;
   background-color: #001F8B;
   border-radius: 5px;
@@ -136,7 +136,7 @@ textarea {
 textarea {
   flex: 1;
  position: relative;
- top: 13px;
+ top: 11px;
   width: calc(100% - 20px); 
   padding: 10px;
   border: 1px solid #ccc;
