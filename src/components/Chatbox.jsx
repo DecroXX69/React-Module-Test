@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import styles from './Chatbox.module.css';
 import sendIcon from '../images/send.png';
 import idleIcon from '../images/idle.png';
-import dotIcon from '../images/dot.png'; // Import the dot image
-import backArrow from '../images/backArrow.png'; // Import the back arrow image
+import dotIcon from '../images/dot.png'; 
+import backArrow from '../images/backArrow.png'; 
 
 export default function Chatbox({ group, onBack }) {
   const [note, setNote] = useState('');
@@ -37,7 +37,7 @@ export default function Chatbox({ group, onBack }) {
 
   const handleKeyDown = (event) => {
     if (event.key === 'Enter' && !event.shiftKey) {
-      event.preventDefault(); // Prevents new line from being added
+      event.preventDefault(); 
       handleSendNote();
     }
   };
@@ -77,7 +77,7 @@ export default function Chatbox({ group, onBack }) {
           value={note} 
           onChange={(e) => setNote(e.target.value)} 
           placeholder="Enter your text here..."
-          onKeyDown={handleKeyDown} // Add key down event handler
+          onKeyDown={handleKeyDown} 
         />
         <img 
           src={note.trim() === '' ? idleIcon : sendIcon} 

@@ -1,4 +1,4 @@
-/* Base styles for larger screens */
+
 .overlay {
   position: fixed;
   top: 0;
@@ -12,12 +12,12 @@
 }
 
 .modal {
-  position: relative; /* Ensure the modal is positioned relative to its content */
+  position: relative; 
   background: white;
   border-radius: 8px;
   padding: 20px; 
   width: 490px;
-  height: auto; /* Automatically adjust the height */
+  height: auto; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -32,7 +32,7 @@
 
 .inputGroup,
 .colorOptionsGroup {
-  margin-bottom: 30px; /* Increased margin for more space */
+  margin-bottom: 30px; 
   display: flex;
   align-items: center;
   gap: 20px; 
@@ -48,7 +48,7 @@
 }
 
 .colorOptionsGroup {
-  margin-top: 20px; /* Add some space between group name and choose color */
+  margin-top: 20px; 
 }
 
 .colorOptions {
@@ -86,57 +86,61 @@ h3 {
   font-weight: 500;
 }
 
-/* Media query for mobile devices */
+
 @media (max-width: 768px) {
   .modal {
-    width: 100%; /* Full width for mobile view */
-    max-width: 82vw; /* Ensure it doesn't touch the edges */
-    padding: 15px; /* Reduce padding for mobile */
-    overflow: hidden; /* Prevent overflow */
+    width: 100%; 
+    max-width: 90vw; 
+    padding: 15px; 
+    overflow: hidden; 
     display: flex;
     flex-direction: column;
-    height: 100%;
-    max-height: 33vh;
+    height: auto; 
+    max-height: 75vh; 
   }
 
   .inputGroup,
   .colorOptionsGroup {
-    flex-wrap: wrap; /* Allow wrapping to prevent overflow */
-    gap: 10px; /* Reduce gap to fit better on small screens */
+    flex-wrap: wrap; 
+    gap: 10px;
   }
   
   .colorOptionsGroup {
-    margin-bottom: 10px; /* Adjust margin to fit smaller screens */
+    margin-bottom: 10px; 
   }
 
   .input {
-    flex: 1; /* Allow input to grow and fit properly */
+    flex: 1; 
     margin-left: 0;
+    padding-left: 10px; 
   }
 
   .colorOptions {
-    margin-left: 0; /* Align color options properly on small screens */
-    gap: 8px; /* Reduce gap to fit better on small screens */
+    margin-left: 0; 
+    gap: 8px; 
   }
 
   .colorCircle {
-    width: 25px; /* Smaller circles on mobile */
+    width: 25px; 
     height: 25px;
   }
 
   .button {
-    width: 70%; /* Full-width button on mobile */
-    max-width: 300px; /* Ensure it doesn’t become too wide */
-    position: inherit; /* Remove absolute positioning */
-    margin-top: 40px; /* Center and add margin for spacing */
-    margin-right: auto;
-    margin-left: -246px;
+    width: 70%; 
+    max-width: 300px; 
+    position: static; 
+    margin: 20px auto; 
+    margin-left: 20px; 
+    transform: none;
   }
+  
   .overlay {
-    padding: 10px; /* Ensure the modal has some space around it */
+    padding: 10px; 
   }
   
   .label {
-    font-size: 16px; /* Adjust font size for readability */
+    font-size: 16px; 
+    display: block; 
+    margin-bottom: 8px; 
   }
 }

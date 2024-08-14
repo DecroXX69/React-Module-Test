@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './Sidebar.module.css';
 
-// Updated getInitials function to ensure uppercase
+
 const getInitials = (name) => {
   const names = name.split(' ');
   const initials = names.length > 1
     ? `${names[0][0]}${names[1][0]}`
     : `${names[0][0]}`;
-  return initials.toUpperCase(); // Convert initials to uppercase
+  return initials.toUpperCase(); 
 };
 
 export default function Sidebar({ groups, onSelectGroup, selectedGroup }) {
@@ -15,7 +15,7 @@ export default function Sidebar({ groups, onSelectGroup, selectedGroup }) {
 
   useEffect(() => {
     if (groupListRef.current) {
-      groupListRef.current.scrollTop = 0; // Ensure scroll starts at the top
+      groupListRef.current.scrollTop = 0; 
     }
   }, []);
 

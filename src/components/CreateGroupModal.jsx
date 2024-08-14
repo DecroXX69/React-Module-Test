@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid'; // Import uuid for unique IDs
+import { v4 as uuidv4 } from 'uuid'; 
 import styles from './CreateGroupModal.module.css';
 
 export default function CreateGroupModal({ onClose }) {
@@ -7,10 +7,10 @@ export default function CreateGroupModal({ onClose }) {
   const [groupColor, setGroupColor] = useState('');
 
   const handleCreateGroup = () => {
-    if (!groupName || !groupColor) return; // Prevent creating group if inputs are empty
+    if (!groupName || !groupColor) return; 
 
     const newGroup = {
-      id: uuidv4(), // Add unique ID
+      id: uuidv4(),
       name: groupName,
       color: groupColor,
     };

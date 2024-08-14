@@ -46,7 +46,7 @@
 .note {
   background-color: #fff;
   padding: 10px;
-  padding-bottom: 60px; /* Adjusted for timestamp space */
+  padding-bottom: 60px; 
   border-radius: 5px;
   margin-bottom: 10px;
   margin-left: 20px;
@@ -54,7 +54,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   word-wrap: break-word;
   white-space: pre-wrap;
-  position: relative; /* Positioning for the timestamp */
+  position: relative; 
   letter-spacing: 3%;
   line-height: 28px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -81,7 +81,7 @@
 .dotIcon {
   width: 4px;
   height: 4px;
-  margin: 0 5px; /* Spacing between date, dot, and time */
+  margin: 0 5px; 
 }
 
 .inputArea {
@@ -118,18 +118,18 @@ textarea {
   left: 72em;
 }
 .backArrow {
-  display: none; /* Hide back arrow in web view */
+  display: none; 
 }
-/* Global styles for mobile view */
+
 @media (max-width: 768px) {
   .inputArea {
-  height: 110px; /* Adjust as needed */
+  height: 110px; 
   padding: 10px;
   background-color: #001F8B;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensure textarea and send icon are spaced correctly */
+  justify-content: space-between; 
   z-index: 1;
 }
 
@@ -137,19 +137,19 @@ textarea {
   flex: 1;
  position: relative;
  top: 15px;
-  width: calc(100% - 20px); /* Adjust width */
+  width: calc(100% - 20px); 
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   resize: none;
-  margin: -10px; /* Remove extra margin */
+  margin: -10px; 
   
 }
 
   
   .notesArea {
     overflow-y: auto;
-    max-height: calc(100vh - 60px); /* Adjust height to fit within viewport */
+    max-height: calc(100vh - 60px); 
   }
   .sendIcon{
     width: 28px;
@@ -161,14 +161,14 @@ textarea {
   }
 
   .chatbox {
-    display: none; /* Hide chatbox initially */
+    display: none; 
   }
 
   .backArrow {
-    display: none; /* Hide back arrow initially */
+    display: none; 
   }
 
-  /* Show chatbox and back arrow when a group is selected */
+  
   .showChatbox .chatbox {
     display: flex;
   }
@@ -177,10 +177,10 @@ textarea {
     display: block;
   }
   .mobileView .backArrow {
-    display: block; /* Show back arrow when chatbox is visible */
+    display: block; 
   }
   .mobileView {
-    display: flex; /* Display chatbox when mobile view is active */
+    display: flex; 
     flex-direction: column;
   }
 
@@ -195,8 +195,8 @@ textarea {
   }
   
   .groupIcon {
-    position: relative; /* Ensure it's positioned correctly in relation to the header */
-    margin-right: 50px; /* Ensure space is provided for the back button */
+    position: relative; 
+    margin-right: 50px; 
     left: 40px;
   }
   

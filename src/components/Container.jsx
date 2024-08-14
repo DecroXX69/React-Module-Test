@@ -9,20 +9,17 @@ export default function Container() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [groups, setGroups] = useState([]);
   const [selectedGroup, setSelectedGroup] = useState(null);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Check initial screen width
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); 
 
-  // Load groups from local storage when component mounts
   useEffect(() => {
     const savedGroups = JSON.parse(localStorage.getItem('groups')) || [];
     setGroups(savedGroups);
   }, []);
 
-  // Save groups to local storage whenever they change
   useEffect(() => {
     localStorage.setItem('groups', JSON.stringify(groups));
   }, [groups]);
 
-  // Update the mobile view state on window resize
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -38,10 +35,10 @@ export default function Container() {
 
   const handleCloseModal = (newGroup) => {
     if (newGroup) {
-      // Add new group to the list
+      
       const updatedGroups = [...groups, newGroup];
       setGroups(updatedGroups);
-      setSelectedGroup(newGroup); // Select the newly created group
+      setSelectedGroup(newGroup); 
     }
     setIsModalOpen(false);
   };
