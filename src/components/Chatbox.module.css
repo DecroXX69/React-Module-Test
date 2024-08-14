@@ -1,0 +1,205 @@
+.chatbox {
+  box-sizing: border-box;
+  height: 100vh;
+  flex: 1;
+  background-color: #dae5f5;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: #001F8B;
+  padding: 10px; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.groupIcon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  margin-right: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.groupName {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.notesArea {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+.note {
+  background-color: #fff;
+  padding: 10px;
+  padding-bottom: 60px; /* Adjusted for timestamp space */
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  position: relative; /* Positioning for the timestamp */
+  letter-spacing: 3%;
+  line-height: 28px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.noteTimestamp {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #353535;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.noteTimestamp span {
+  margin: 0 5px;
+}
+
+.dotIcon {
+  width: 4px;
+  height: 4px;
+  margin: 0 5px; /* Spacing between date, dot, and time */
+}
+
+.inputArea {
+  max-height: 160px ;
+  align-items: center;
+  background-color: #001F8B;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+textarea {
+  flex: 1;
+  height: 140px;
+  width: 88em;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  position: relative;
+  top: 1px;
+  overflow-y: auto;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.sendIcon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  position: relative;
+  bottom: 50px;
+  left: 72em;
+}
+.backArrow {
+  display: none; /* Hide back arrow in web view */
+}
+/* Global styles for mobile view */
+@media (max-width: 768px) {
+  .inputArea {
+  height: 110px; /* Adjust as needed */
+  padding: 10px;
+  background-color: #001F8B;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure textarea and send icon are spaced correctly */
+  z-index: 1;
+}
+
+textarea {
+  flex: 1;
+ position: relative;
+ top: 15px;
+  width: calc(100% - 20px); /* Adjust width */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  margin: -10px; /* Remove extra margin */
+  
+}
+
+  
+  .notesArea {
+    overflow-y: auto;
+    max-height: calc(100vh - 60px); /* Adjust height to fit within viewport */
+  }
+  .sendIcon{
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    position: relative;
+    left: 145px;
+    top: -15px;
+  }
+
+  .chatbox {
+    display: none; /* Hide chatbox initially */
+  }
+
+  .backArrow {
+    display: none; /* Hide back arrow initially */
+  }
+
+  /* Show chatbox and back arrow when a group is selected */
+  .showChatbox .chatbox {
+    display: flex;
+  }
+
+  .showChatbox .backArrow {
+    display: block;
+  }
+  .mobileView .backArrow {
+    display: block; /* Show back arrow when chatbox is visible */
+  }
+  .mobileView {
+    display: flex; /* Display chatbox when mobile view is active */
+    flex-direction: column;
+  }
+
+  .backArrow {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    z-index: 1001;
+  }
+  
+  .groupIcon {
+    position: relative; /* Ensure it's positioned correctly in relation to the header */
+    margin-right: 50px; /* Ensure space is provided for the back button */
+    left: 40px;
+  }
+  
+}
+
+

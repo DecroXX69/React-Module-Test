@@ -1,0 +1,142 @@
+/* Base styles for larger screens */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  position: relative; /* Ensure the modal is positioned relative to its content */
+  background: white;
+  border-radius: 8px;
+  padding: 20px; 
+  width: 490px;
+  height: auto; /* Automatically adjust the height */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.label {
+  font-weight: bold;
+  font-size: 18px; 
+  margin-bottom: 10px; 
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  letter-spacing: 3.5%;
+}
+
+.inputGroup,
+.colorOptionsGroup {
+  margin-bottom: 30px; /* Increased margin for more space */
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+}
+
+.input {
+  flex: 0 1 60%; 
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 18px; 
+  font-size: 16px;
+  margin-left: 15px; 
+}
+
+.colorOptionsGroup {
+  margin-top: 20px; /* Add some space between group name and choose color */
+}
+
+.colorOptions {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px; 
+}
+
+.colorCircle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.button {
+  background-color: #001F8B;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 0px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 30%;
+  max-width: 300px;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(58%)
+}
+
+h3 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .modal {
+    width: 100%; /* Full width for mobile view */
+    max-width: 82vw; /* Ensure it doesn't touch the edges */
+    padding: 15px; /* Reduce padding for mobile */
+    overflow: hidden; /* Prevent overflow */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: 33vh;
+  }
+
+  .inputGroup,
+  .colorOptionsGroup {
+    flex-wrap: wrap; /* Allow wrapping to prevent overflow */
+    gap: 10px; /* Reduce gap to fit better on small screens */
+  }
+  
+  .colorOptionsGroup {
+    margin-bottom: 10px; /* Adjust margin to fit smaller screens */
+  }
+
+  .input {
+    flex: 1; /* Allow input to grow and fit properly */
+    margin-left: 0;
+  }
+
+  .colorOptions {
+    margin-left: 0; /* Align color options properly on small screens */
+    gap: 8px; /* Reduce gap to fit better on small screens */
+  }
+
+  .colorCircle {
+    width: 25px; /* Smaller circles on mobile */
+    height: 25px;
+  }
+
+  .button {
+    width: 70%; /* Full-width button on mobile */
+    max-width: 300px; /* Ensure it doesn’t become too wide */
+    position: inherit; /* Remove absolute positioning */
+    margin-top: 40px; /* Center and add margin for spacing */
+    margin-right: auto;
+    margin-left: -246px;
+  }
+  .overlay {
+    padding: 10px; /* Ensure the modal has some space around it */
+  }
+  
+  .label {
+    font-size: 16px; /* Adjust font size for readability */
+  }
+}
